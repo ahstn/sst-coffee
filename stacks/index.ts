@@ -1,5 +1,7 @@
 import { App } from "@serverless-stack/resources";
-import { ConfigTable } from "./config-table";
+
+import { ConfigTable } from "./dynamo/config-table";
+import { OrderBus } from "./event-bus";
 import { OrderFlow } from "./step-function";
 
 export default function main(app: App) {
@@ -10,5 +12,6 @@ export default function main(app: App) {
 
     app
         .stack(ConfigTable)
+        .stack(OrderBus)
         .stack(OrderFlow);
 }
