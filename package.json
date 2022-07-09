@@ -1,0 +1,36 @@
+{
+  "name": "serverlesspresso-sst",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "sst start",
+    "build": "sst build",
+    "deploy": "sst deploy --stage=production",
+    "remove": "sst remove",
+    "console": "sst console",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "@serverless-stack/cli": "^1.3.0",
+    "@serverless-stack/resources": "^1.3.0",
+    "@tsconfig/node16": "^1.0.3",
+    "@typescript-eslint/eslint-plugin": "^5.30.5",
+    "@typescript-eslint/parser": "^5.30.5",
+    "aws-cdk-lib": "2.24.0",
+    "eslint": "^8.19.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "^2.7.1",
+    "typescript": "^4.7.4",
+    "vitest": "^0.17.1"
+  },
+  "workspaces": [
+    "services",
+    "graphql",
+    "web"
+  ],
+  "overrides": {
+    "graphql": "16.5.0"
+  }
+}
