@@ -1,14 +1,14 @@
-import { StackContext, Table } from "@serverless-stack/resources";
+import { StackContext, Table } from '@serverless-stack/resources'
 
 export function CountingTable({ stack }: StackContext) {
-  const table = new Table(stack, "serverlesspresso-counting", {
-    fields: {
-      pk: "string",
-    },
-    primaryIndex: {
-      partitionKey: "pk",
-    },
-  });
-
-  return table;
+    return new Table(stack, 'Counting', {
+        fields: {
+            pk: 'string',
+            IDvalue: 'number',
+            metadata: 'string',
+        },
+        primaryIndex: {
+            partitionKey: 'pk',
+        },
+    })
 }

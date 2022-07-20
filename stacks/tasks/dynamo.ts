@@ -14,7 +14,7 @@ export function ShopStatus(stack: sst.Stack, table: dynamo.ITable): tasks.Dynamo
 export function IncrementOrderNumber(stack: sst.Stack, table: dynamo.ITable): tasks.DynamoUpdateItem {
     return new tasks.DynamoUpdateItem(stack, 'Generate Order Number', {
         key: {
-            MessageId: tasks.DynamoAttributeValue.fromString('message-007')
+            MessageId: tasks.DynamoAttributeValue.fromString('PK'),
         },
         table: table,
         expressionAttributeValues: {

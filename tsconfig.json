@@ -1,4 +1,9 @@
 {
-  "extends": "@tsconfig/node16/tsconfig.json",
-  "include": ["stacks"]
+    "extends": "@tsconfig/node16/tsconfig.json",
+    "include": [
+        "stacks"
+    ],
+    "compilerOptions": {
+        "incremental": true
+    }
 }
